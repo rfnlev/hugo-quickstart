@@ -44,7 +44,6 @@ button {
     letter-spacing: 0.07em;    
     background-color:#056478 !important;
     color:white;
-    font-weight: bold;
     margin: 10px 10px 10px 0;
     font-size: 1.4rem;
     padding: 0 10px 0 10px;

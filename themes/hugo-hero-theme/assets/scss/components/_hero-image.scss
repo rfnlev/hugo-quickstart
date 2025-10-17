@@ -98,7 +98,6 @@
       font-family: "CCSignLanguage Regular", system-ui!important;
       letter-spacing: 0.07em;
       font-size: 2rem;
-        font-weight: 900;
         margin: 0rem;
         @include media-breakpoint-up(xs) {
           filter: drop-shadow(2px 2px 2px #1c1d1d);
@@ -181,7 +180,6 @@
         font-family: "CCSignLanguage Regular", system-ui!important;
         letter-spacing: 0.07em;
         font-size: 1rem;
-          font-weight: 900;
           margin: 0rem;
           @include media-breakpoint-up(xs) {
             filter: drop-shadow(2px 2px 2px #1c1d1d);

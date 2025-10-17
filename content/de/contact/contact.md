@@ -40,7 +40,6 @@ button {
     font-family: "CCSignLanguage Regular", system-ui!important;
     letter-spacing: 0.07em;    
     color:white;
-    font-weight: bold;
     margin: 10px 10px 10px 0;
     font-size: 1.4rem;
     padding: 0 10px 0 10px;
