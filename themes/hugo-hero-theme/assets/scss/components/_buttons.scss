@@ -1,4 +1,6 @@
 .button {
+  font-family: "CCSignLanguage Regular", system-ui!important;
+  letter-spacing: 0.07em;    
   white-space: nowrap;
   display: inline-block;
   padding: 7px 15px;
@@ -18,6 +20,8 @@
   }
 }
 .button-white {
+  font-family: "CCSignLanguage Regular", system-ui!important;
+  letter-spacing: 0.07em;    
   background: none;
   color: #fff;
   border: 2px solid #fff;

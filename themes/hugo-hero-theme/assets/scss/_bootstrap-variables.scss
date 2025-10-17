@@ -109,6 +109,8 @@ $spacers: map-merge(
 
 .listfeaturedtag h2.card-title,
 .listrecent h2.card-title {
+  font-family: "CCSignLanguage Regular", system-ui!important;
+  letter-spacing: 0.07em;    
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.25;

@@ -37,6 +37,8 @@ textarea {
 }
 button {
     background-color:#056478 !important;
+    font-family: "CCSignLanguage Regular", system-ui!important;
+    letter-spacing: 0.07em;    
     color:white;
     font-weight: bold;
     margin: 10px 10px 10px 0;

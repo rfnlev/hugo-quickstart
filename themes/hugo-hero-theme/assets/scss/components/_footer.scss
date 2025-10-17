@@ -19,6 +19,7 @@
     color: #056478;
     font-size: 1.3rem;
     font-family: $font-family-heading;
+    letter-spacing: 0.07em;
     margin-bottom: 10px;
     flex: 0;
     @include media-breakpoint-up(sm) {

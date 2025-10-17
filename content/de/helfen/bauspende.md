@@ -40,6 +40,8 @@ textarea {
   box-sizing: border-box;
 }
 button {
+    font-family: "CCSignLanguage Regular", system-ui!important;
+    letter-spacing: 0.07em;    
     background-color:#056478 !important;
     color:white;
     font-weight: bold;
