@@ -56,9 +56,11 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
-  font-size: $font-size-base;
+  font-family: "Baloo Tamma 2", system-ui;
+  font-optical-sizing: auto;
   font-weight: $font-weight-base;
+  font-style: normal;
+  font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-color;
   text-align: left; // 3

@@ -16,7 +16,7 @@ if(typeof jQuery==="undefined"){loadjQuery("//ajax.googleapis.com/ajax/libs/jque
 
 <style>
 .cr_site{margin:0;padding:10px 0 0 0;text-align:center;background-color:#eeeeee;}
-.cr_font{font-size: 12px;font-family: "Sharktooth";}
+.cr_font{font-size: 12px;font-family: "Baloo Tamma 2";}
 .cr_body h2, .cr_header h2{font-size:22px;line-height:28px;margin:0 0 10px 0;}
 .cr_body h1, .cr_header h2{font-size:28px;margin-bottom:15px;padding:0;margin-top:0;}
 .wrapper, .cr_page{margin:0 0 10px 0;text-align:left;border-radius:4px;}
