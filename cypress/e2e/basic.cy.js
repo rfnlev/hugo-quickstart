@@ -1,16 +1,12 @@
-describe('empty spec', () => {
+describe('Freie Schule Ostfriesland website', () => {
   beforeEach(() => {
     cy.visit('/')
   })
-  it('displays the resources text', () => {
-    cy.get('h2')
-    .contains('This is a bare-bones Hugo project that has everything you need to quickly deploy it to Netlify');
+  it('displays the school name', () => {
+    cy.get('h1')
+    .contains('Wir sind die Freie Schule Ostfriesland!');
   })
-  it('renders the image', () => {
-    cy.get('img')
-    .should('be.visible')
-    .and(($img) => {
-      expect($img[0].naturalWidth).to.be.greaterThan(0);
-    })
+  it('displays the hero heading', () => {
+    cy.contains('Freie Schule Ostfriesland');
   })
 })
