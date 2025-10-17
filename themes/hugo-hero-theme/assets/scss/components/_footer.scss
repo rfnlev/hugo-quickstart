@@ -16,7 +16,7 @@
     }
   }
   .footer-title {
-    color: #056478;
+    color: #5b637f;
     font-size: 1.3rem;
     font-family: $font-family-heading;
     letter-spacing: 0.07em;
@@ -38,14 +38,14 @@
     li {
       display: block;
       margin-right: 10px;
-      color: #056478;
+      color: #5b637f;
       font-size: 0.9rem;
       line-height: 1.8;
       &:last-of-type {
         margin-right: 0;
       }
       a {
-        color: #056478;
+        color: #5b637f;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -55,7 +55,7 @@
         font-weight: bold;
         padding: 10px 8px 10px 8px;
         height: 40px;
-        color: #056478;
+        color: #5b637f;
         display: none;
         @include media-breakpoint-up(md) {
           display: inline-block;

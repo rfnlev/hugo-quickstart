@@ -1,6 +1,6 @@
 ---
-background: "#b4cfef"
-textcolor: "#056478"
+background: "#f3c881"
+textcolor: "#5b637f"
 weight: 20
 title: Schüler/innen
 photo: /images/uploads/20150621-_DSC0238-Bearbeitet.jpg

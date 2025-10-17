@@ -1,6 +1,6 @@
 ---
 background: "#f2f2f2"
-textcolor: "#056478"
+textcolor: "#5b637f"
 weight: 30
 title: Lernbegleiter/innen
 photo: /images/uploads/adobestock_453556539.jpeg

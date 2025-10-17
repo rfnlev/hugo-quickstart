@@ -1,6 +1,6 @@
 ---
-color: "#056478"
-background: "#056478"
+color: "#5b637f"
+background: "#5b637f"
 textcolor: "#ffffff"
 weight: 10
 title: Grundgedanken
