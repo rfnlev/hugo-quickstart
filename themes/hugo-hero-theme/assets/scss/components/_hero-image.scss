@@ -56,7 +56,8 @@
           }
         }
         h2 {
-          font-family: "CCSignLanguage Regular", sans-serif, -apple-system;
+          font-family: "CCSignLanguage Regular", system-ui!important;
+          letter-spacing: 0.07em;
           font-size: 2.2rem;
           @include media-breakpoint-up(xs) {
             filter: drop-shadow(2px 2px 2px #1c1d1d);
@@ -177,7 +178,8 @@
 .hero-halftext {
       margin: auto 0;
       h1 {
-        font-family: "Arial", sans-serif, -apple-system;
+        font-family: "CCSignLanguage Regular", system-ui!important;
+        letter-spacing: 0.07em;
         font-size: 1rem;
           font-weight: 900;
           margin: 0rem;
@@ -196,7 +198,8 @@
         }
       }
       h2 {
-        font-family: "CCSignLanguage Regular", sans-serif, -apple-system;
+        font-family: "CCSignLanguage Regular", system-ui!important;
+        letter-spacing: 0.07em;
         font-size: 1.1rem;
         @include media-breakpoint-up(xs) {
           filter: drop-shadow(2px 2px 2px #1c1d1d);
@@ -210,6 +213,7 @@
         }
       }
       p {
+        font-family: "Baloo Tamma 2", system-ui!important;
         font-size: 0.5rem;
         font-weight: 900;
         line-height: 1;
