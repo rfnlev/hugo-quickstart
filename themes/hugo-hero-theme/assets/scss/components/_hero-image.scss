@@ -37,7 +37,7 @@
         color: #ffffff;
         margin: auto 0;
         h1 {
-          font-family: "Arial", sans-serif, -apple-system;
+          font-family: "CCSignLanguage Regular", system-ui!important;
           font-size: 1.5rem;
             font-weight: 900;
             margin-top: 5rem;
@@ -71,15 +71,14 @@
           }
         }
         p {
-          font-size: 0.8rem;
-          font-weight: 900;
+          font-size: 0.6rem;
           line-height: 0.9;
           @include media-breakpoint-up(xs) {
             filter: drop-shadow(2px 2px 2px #1c1d1d);
           }
           @include media-breakpoint-up(sm) {
             filter: drop-shadow(4px 4px 2px #1c1d1d);
-            font-size: 1.7rem;
+            font-size: 1.2rem;
           }
           @include media-breakpoint-up(md) {
             filter: drop-shadow(4px 4px 4px #1c1d1d);

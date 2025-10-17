@@ -1,6 +1,6 @@
 ---
 heroHeading: Unser Tagebuch
-heroBackground: https://res.cloudinary.com/dzw4emsdt/image/upload/v1638310138/website/neutral-colors_bkbuxj.webp
+heroBackground: https://res.cloudinary.com/dzw4emsdt/image/upload/v1760734636/website/neutral-colors_bkbuxj_aknho5.webp
 date: 2021-01-21T21:52:18+07:00
 photo: /images/uploads/img_0562.jpg
 heroCredit: Adobe Stock (modified)

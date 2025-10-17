@@ -1,6 +1,6 @@
 ---
 heroHeading: Wir suchen Dich!
-heroBackground: https://res.cloudinary.com/dzw4emsdt/image/upload/v1638216447/website/AdobeStock_51891331-4-1_Kopie_dxsnxv.webp
+heroBackground: https://res.cloudinary.com/dzw4emsdt/image/upload/v1760732970/website/AdobeStock_51891331-4-1_Kopie_dxsnxv_aiwh7u.webp
 intro: Diesen Eintrag bitte nicht löschen, er wird aus technischen Gründen gebraucht!
 date: 2021-01-21T21:52:18+07:00
 heroCredit: Adobe Stock (modified)
