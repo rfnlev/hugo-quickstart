@@ -1,0 +1,15 @@
+<!-- begin post -->
+<div class="col-lg-4 col-md-6 mb-10px  pb-2 card-group">
+    <div class="card h-100">
+        <div class="maxthumb">
+            <img class="img-fluid img-diary" src="{{ .photo }}" alt="Thumbnail image for '{{ .name }}'">
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">{{ .name }} {{if .education}} ({{.education}}) {{end}}</h2>
+            {{if .title}}<p class="card-title">{{ .title }}</p>{{end}}
+            <p class="card-text">{{ .bio | markdownify }}</p>            
+        </div>
+    </div>
+</div>
+
+<!-- end post -->

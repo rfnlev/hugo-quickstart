@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="480" height="360"></canvas>  
+
+    <script>
+
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+    let rows = 15;
+    let cols = 20;
+
+    draw();
+
+    function draw() {
+        for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+                if ((r+c)%2==1) {
+                    ctx.fillStyle = '#056478';
+                }
+                else {
+                    ctx.fillStyle = 'black';
+                }
+                ctx.fillRect(c*24, r*24, 24, 24);
+            }
+        }
+    }
+    </script>
+</body>
+</html>

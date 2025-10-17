@@ -1,0 +1,19 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <ul class="footer-menu" style="display: flex; justify-content: center; align-items: flex-start;">
+            <li><a href="{{ "/" | absLangURL }}">Home</a></li>
+            <li><a href="{{ "/impressum/" | absLangURL }}">Impressum</a></li>
+            <li><a href="{{ "/datenschutz/" | absLangURL }}">Datenschutz</a></li>
+            {{if isset .Params "herolink" }}
+              <li><a href="{{.Params.heroLink}}" target="_blank" >Hero Image: {{.Params.heroCredit}}</a></li>
+              {{ end }}
+            <li><a href="/impressum">© {{ now.Format "2006" }} Freie Schule Ostfriesland</a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-services-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+{{ partial "hero-image-sethalf.html" (dict "background" "https://res.cloudinary.com/dzw4emsdt/image/upload/v1686416860/headersmall_hqzwhi.webp" "heading" "Projekte" "subheading" .Title "content" . "parent" .Parent.Permalink)}}
+
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="service service-single">
+        <div class="content">{{.Content}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-start">
+    <a class="rfnlbutton" href="javascript:history.back()">Zurück</a>
+  </div>
+</div>
+
+{{ end }}
+
+{{ define "footer_js" }}
+{{ $library := resources.Get "js/libs/library.js" }}
+{{ $services := resources.Get "js/pages/services.js" }}
+{{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
+{{ if .Site.IsServer }}
+  <script type="text/plain" data-cookie-consent="strictly-necessary" src="{{ $servicesJS.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/plain" data-cookie-consent="strictly-necessary" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+{{ end }}

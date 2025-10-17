@@ -1,0 +1,35 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+{{ if .Content }}
+<div class="container pt-6 pt-md-10">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-intro">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+  
+<section class="recent-posts">            
+    <div class="container pt-6 pt-md-10">
+        <div class="row listrecent">
+            {{ $post_paginator := .Paginate (.Pages) 12 }}
+            {{ range $post_paginator.Pages }}
+                {{- partial "list-partials/arbeiten.html" . -}}
+            {{end}}
+        </div>
+        {{- partial "list-partials/pagination.html" $post_paginator -}}
+    </div>
+</section>
+
+{{ end }}
+
+
+

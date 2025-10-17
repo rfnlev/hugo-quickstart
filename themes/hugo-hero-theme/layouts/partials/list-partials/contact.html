@@ -1,0 +1,15 @@
+<!-- begin post -->
+<div class="col-lg-4 col-md-6 pb-2 card-group">
+    <div class="card h-100">
+        <div class="maxthumb">
+                {{if isset .Params "photo"}}
+                <img class="img-fluid img-diary" src="{{ .Params.photo }}" alt="Thumbnail image for '{{ .Title }}'">
+                {{end}}
+        </div>
+        <div class="card-body">
+            <h2 class="card-title">{{ .Title }}</h2>
+            <p class="card-text">{{ .Content }}</p>            
+        </div>
+    </div>
+</div>
+<!-- end post -->

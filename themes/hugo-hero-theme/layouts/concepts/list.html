@@ -1,0 +1,70 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-services-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+{{ if .Content }}
+<div class="container pt-6 pt-md-10">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-intro">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<div class="container pt-6">
+  <div class="container pb-6 pb-md-4 pt-md-4">
+    <div class="row">
+      {{ range $.Site.Data.values.value }}
+      <div class="col-12 col-md-6 mb-2 ">
+        
+        <div class="concept concept-summary">
+          {{ if .icon }}
+          <div class="concept-image">
+            <img src="{{ .icon }}"/>
+          </div>
+          {{ end }}
+          <div class="concept-content">
+            <h2 class="concept-title">
+              {{ .name }}
+            </h2>
+            {{ .explanation }}
+          </div>
+        </div>
+        
+        
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+{{ $considerations := where .Site.RegularPages "Type" "considerations" }}    
+{{ range $considerations }}
+<section style="padding-top: 25px; padding-bottom: 25px; color: {{.Params.textcolor}}; background-color: {{.Params.background}};">
+<div class="container" >
+  <div class="row">
+  <div class="col-12 col-md-1"></div>
+  <div class="col-12 col-md-10 mb-2 ">
+      <div class="consideration">
+        <h2 class="consideration-title">{{ .Params.title }}</h2>
+          <div class="consideration-content">
+            {{ if .Params.photo }}<div class="considerations-frame"><img class= "considerations-image" alt="{{ .Params.title}} logo" src="{{ .Params.photo }}" /></div> {{ end }}
+          <div class="feature-content">
+            {{ .Content }}
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</section>
+{{end}}
+
+
+{{ end }}

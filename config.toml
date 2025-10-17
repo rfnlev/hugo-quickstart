@@ -1,0 +1,77 @@
+baseURL = "/"
+title = "Freie Schule Ostfriesland"
+theme = "hugo-hero-theme"
+defaultContentLanguage = "de"
+
+[params]
+  google_analytics_id="UA-96986609-1"
+  
+  [params.homepage_meta_tags]
+    meta_description = "Die Freie Schule Ostfriesland ist eine offene, freie Schule für selbstbestimmtes Lernen."
+    meta_og_title = "Freie Schule Ostfriesland"
+    meta_og_type = "website"
+    meta_og_url = "https://freie-schule-ostfriesland.de"
+    meta_og_image = "https://freie-schule-ostfriesland.de/images/logo.svg"
+    meta_og_description = "Die Freie Schule Ostfriesland wird durch den Raum für natürliches Lernen e.V. verantwortet."
+    google_site_verification = "Ew3_5jKTXJDOv1KYVUkXd4eAN6Z-ZB2nsTZ62bmz1N0" 
+
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+  pages = "/:filename/"
+
+
+[languages]
+    [languages.de]
+        languageName     = "German"
+        languageCode     = "de"
+        contentDir       = "content/de"
+        [languages.de.params]
+            dateFormat   = "2. January 2006"
+            description  = "Gedanken."
+            # footerText   = ""
+        [[languages.de.menu.main]]
+            name = "Konzept"
+            url = "/concepts/"
+            weight = 60
+
+        [[languages.de.menu.main]]
+            name = "FAQs"
+            url = "/faq/"
+            weight = 70
+
+        [[languages.de.menu.main]]
+            name    = "Schultagebuch"
+            url   = "/diary/"
+            weight = 80
+
+        [[languages.de.menu.main]]
+            name    = "Arbeiten"
+            url   = "/arbeiten/"
+            weight = 82
+
+        [[languages.de.menu.main]]
+            name    = "Helfen"
+            url   = "/helfen/"
+            weight = 83
+
+        [[languages.de.menu.main]]
+            name    = "Team"
+            url   = "/about/"
+            weight = 81
+
+        [[languages.de.menu.main]]
+            name = "Kontakt"
+            url = "/contact/"
+            weight = 84
+
+        [[languages.de.menu.main]]
+            name = "Impressum"
+            url = "/impressum/"
+            weight = 93
+
+        [[languages.de.menu.main]]
+            name = "Datenschutz"
+            url = "/datenschutz/"
+            weight = 99
+

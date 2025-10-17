@@ -1,0 +1,22 @@
+<div id="main-menu" class="main-menu">
+  <ul>
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    {{ if gt 90 (.Weight | int) }}
+    <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+      <a href="{{.URL | absLangURL }}">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+      </a>
+    </li>
+    {{end}}
+    {{end}}
+    
+    {{ range $.Site.Home.AllTranslations.ByWeight }}
+    {{ if ne .Language.LanguageName $.Language.LanguageName }}
+    <a class="navbar-item" style="margin-left:10px;" href="{{ .Permalink }}">SITE IN {{ .Language.LanguageName | upper }}</a>
+    {{ end }}
+    {{ end }}
+
+  </ul>
+</div>

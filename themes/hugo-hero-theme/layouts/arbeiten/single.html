@@ -1,0 +1,95 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-services-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+{{ partial "hero-image-sethalf.html" (dict "background" "https://res.cloudinary.com/dzw4emsdt/image/upload/v1648913963/website/AdobeStock_51891331-8-1_knmbtz.webp" "heading" .Params.jobposting "subheading" .Title "content" . "parent" .Parent.Permalink)}}
+
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="service service-single">
+          <div class="content">{{.Params.intro | markdownify}}</div>
+          <h2 style="margin-top: 15px;">Was bieten wir?</h2>
+          <div class="content">{{.Params.needs| markdownify}}</div>
+          <h2 style="margin-top: 15px;">Was bringst du mit?</h2>
+          <div class="content">{{.Params.skills| markdownify}}</div>
+          <div class="content">{{.Params.outro| markdownify}}</div>
+          <h2 style="margin-top: 15px;">Bewirb dich gleich hier:</h2>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: -80px;">
+    <span>
+      <style> 
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      checkbox {
+        width: auto;
+        float: left;
+        padding: 12px 20px;
+        margin: 8px 4px;
+        box-sizing: border-box;
+      }
+      textarea {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      button {
+          background-color:#056478 !important;
+          color:white;
+          font-weight: bold;
+          margin: 10px 10px 10px 0;
+          font-size: 1.4rem;
+          padding: 0 10px 0 10px;
+          border-radius: 6px;
+      }
+      </style>
+      <form id="job" method="POST" data-netlify="true" action="/thanks">
+        <p style="visibility:hidden;">
+          <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>  
+        <p style="visibility:hidden;">
+          <label><input name="job" />Rückmeldung zu "{{.Params.jobposting}}"</label>
+        </p>  
+        <label for="name">Dein Name:</label>
+        <input type="text" name="name" required>
+        <label for="email">E-Mail-Adresse:</label>
+        <input type="email" name="email" required>
+        <label for="message">Deine Nachricht:</label>
+        <textarea name="message" rows="10" cols="30" form="job"></textarea>  
+        <input type="checkbox" name=privacy value="x" required> Ich stimme der Speicherung und Verarbeitung meiner persönlichen Daten durch die Freie Schule Ostfriesland zu.<br/>
+        <button type="submit">Absenden</button>
+      </form>
+      </span>
+  </div>
+
+  <div class="row justify-content-start">
+    <a class="rfnlbutton" href="javascript:history.back()">Zurück</a>
+  </div>
+</div>
+
+{{ end }}
+
+{{ define "footer_js" }}
+{{ $library := resources.Get "js/libs/library.js" }}
+{{ $services := resources.Get "js/pages/services.js" }}
+{{ $servicesJS := slice $library $services |resources.Concat "js/services.js" }}
+{{ if .Site.IsServer }}
+  <script type="text/plain" data-cookie-consent="strictly-necessary" src="{{ $servicesJS.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/plain" data-cookie-consent="strictly-necessary" src="{{ ($servicesJS | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+{{ end }}

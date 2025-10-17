@@ -1,0 +1,19 @@
+<!-- begin post -->
+<div class="col-lg-4 col-md-6 mb-10px  pb-2 card-group">
+    <div class="card h-100">
+        <div class="maxthumb">
+            <a href="{{ .Permalink }}">
+                {{if isset .Params "photo"}}
+                <img class="img-fluid img-diary" src="{{ .Params.photo }}" alt="Thumbnail image for '{{ .Title }}'">
+                {{end}}
+            </a>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title"><a class="rfnl" href="{{ .Permalink }}">{{ .Params.jobposting }}</a></h2>
+            <p class="card-text">{{ .Params.intro }}</p>            
+            <p class="card-text"><a href="{{ .Permalink }}">Mehr Infos</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- end post -->
