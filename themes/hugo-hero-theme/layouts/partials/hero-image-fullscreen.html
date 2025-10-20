@@ -12,7 +12,12 @@
 </div>
 -->
 
-<div id="hero" class="hero-image hero-image-setheight" style="margin-top: 60px; color: #ffffff!important; background-image: url('{{ .background | relURL }}')">
+<div id="hero" class="hero-image hero-image-setheight hero-responsive" style="margin-top: 60px; color: #ffffff!important; background-image: url('{{ .background | relURL }}')">
+  <!-- Responsive logo overlay -->
+  <div class="hero-logo-overlay">
+    <img src="{{ "images/logo.svg" | relURL }}" alt="FSO Logo" class="hero-logo-responsive">
+  </div>
+  
   <div class="container ">
     <div class="frontpage-hero-text">
 <!--      <span class="hero-section">{{ .section }}</span> -->

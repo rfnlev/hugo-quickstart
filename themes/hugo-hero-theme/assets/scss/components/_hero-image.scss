@@ -262,6 +262,84 @@
   background-blend-mode: overlay;
 }
 
+/* Responsive hero image with logo overlay */
+.hero-responsive {
+  position: relative;
+  background-size: 100% auto; /* Scale width to 100%, height auto for small screens */
+  background-position: center top;
+  background-repeat: no-repeat;
+  
+  /* Dynamic height based on viewport width to maintain aspect ratio */
+  height: 50vw; /* Responsive height based on viewport width */
+  max-height: 460px; /* Cap the maximum height */
+  min-height: 250px; /* Ensure minimum height for very small screens */
+  
+  @include media-breakpoint-up(sm) {
+    height: 45vw;
+    min-height: 300px;
+  }
+  
+  @include media-breakpoint-up(md) {
+    height: 40vw;
+    min-height: 350px;
+  }
+  
+  @include media-breakpoint-up(lg) {
+    height: 460px; /* Fixed height for large screens and above */
+    min-height: 460px;
+    background-size: cover; /* Switch to cover for large screens to prevent cutting */
+    background-position: center center; /* Center the background for better framing */
+  }
+}
+
+.hero-logo-overlay {
+  position: absolute;
+  top: 35%; /* Proportional positioning based on image content */
+  right: -5%; /* Move 10% more to the right (was 5%, now -5%) */
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 80%; /* Bigger logo size for small screens */
+  max-width: none; /* Remove max-width to allow proportional scaling */
+  
+  @include media-breakpoint-up(sm) {
+    width: 70%; /* Bigger logo size for medium screens */
+    top: 38%; /* Slightly adjust for medium screens */
+    right: -2%; /* Move 10% more to the right (was 8%, now -2%) */
+  }
+  
+  @include media-breakpoint-up(md) {
+    width: 65%; /* Bigger logo size for medium-large screens */
+    top: 42%; /* Adjust for medium-large screens */
+    right: 0%; /* Move 10% more to the right (was 10%, now 0%) */
+  }
+  
+  @include media-breakpoint-up(lg) {
+    width: 60%; /* Bigger logo size for large screens */
+    top: 45%; /* Adjust for large screens */
+    right: 2%; /* Move 10% more to the right (was 12%, now 2%) */
+  }
+  
+  @include media-breakpoint-up(xl) {
+    width: 55%; /* Continue scaling bigger for extra large screens */
+    top: 47%; /* Adjust position for extra large screens */
+    right: 5%; /* Move 10% more to the right (was 15%, now 5%) */
+  }
+  
+  /* For very large screens (1400px+) */
+  @media (min-width: 1400px) {
+    width: 50%; /* Bigger size for very large screens */
+    top: 48%; /* Fine-tune position for very large screens */
+    right: 8%; /* Move 10% more to the right (was 18%, now 8%) */
+  }
+}
+
+.hero-logo-responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Remove all drop-shadow filters - no shadow */
+}
+
 .hero-credit {
   text-align: right;
   padding: 5px;
