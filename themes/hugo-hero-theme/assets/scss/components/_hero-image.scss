@@ -298,13 +298,20 @@
   right: -5%; /* Move more to the right for mobile */
   transform: translateY(-50%);
   z-index: 10;
-  width: 90vw; /* Bigger viewport width for consistent mobile sizing */
-  max-width: 500px; /* Increased max-width for larger screens */
+  width: 70vw; /* Smaller viewport width for real mobile devices */
+  max-width: 400px; /* Reduced max-width for mobile */
   
   /* For very small screens below 576px */
   @media (max-width: 575px) {
-    max-width: 400px;
+    width: 65vw; /* Smaller for very small real mobile devices */
+    max-width: 350px;
     right: -12%; /* Move much more to the right for very small screens */
+  }
+  
+  /* Target actual mobile devices with high pixel density */
+  @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    width: 60vw; /* Even smaller size for high-density mobile screens like iPhone */
+    max-width: 320px;
   }
   
   @include media-breakpoint-up(sm) {
