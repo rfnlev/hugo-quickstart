@@ -47,4 +47,45 @@
       font-weight: $font-weight-thin;
     }
   }
+  
+  // Responsive images - prevent images from exceeding page width
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; // Center images
+  }
+  
+  // Ensure figures and image containers are also responsive
+  figure {
+    max-width: 100%;
+    margin: 1rem auto;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+    
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  // Handle any image containers or wrappers
+  .image-container,
+  .wp-caption,
+  .aligncenter,
+  .alignleft,
+  .alignright {
+    max-width: 100%;
+    height: auto;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
