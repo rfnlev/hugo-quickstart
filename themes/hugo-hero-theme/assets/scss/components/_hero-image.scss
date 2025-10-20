@@ -319,14 +319,14 @@
     width: 80vw; /* Bigger viewport-based sizing for medium screens */
     max-width: 550px;
     top: 38%; /* Slightly adjust for medium screens */
-    right: -12%; /* Move more to the right for small screens */
+    right: 3%; /* Keep within viewport bounds */
   }
   
   @include media-breakpoint-up(md) {
     width: 70vw; /* Bigger viewport-based sizing for medium-large screens */
     max-width: 600px;
     top: 44%; /* Adjust for medium-large screens */
-    right: -1%; /* Move more to the right for midsize screens */
+    right: 5%; /* Keep within viewport bounds */
   }
   
   @include media-breakpoint-up(lg) {
