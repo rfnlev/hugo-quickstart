@@ -295,7 +295,7 @@
 .hero-logo-overlay {
   position: absolute;
   top: 35%; /* Proportional positioning based on image content */
-  right: -5%; /* Move more to the right for mobile */
+  right: 2%; /* Keep within viewport bounds */
   transform: translateY(-50%);
   z-index: 10;
   width: 70vw; /* Smaller viewport width for real mobile devices */
@@ -305,13 +305,14 @@
   @media (max-width: 575px) {
     width: 65vw; /* Smaller for very small real mobile devices */
     max-width: 350px;
-    right: -12%; /* Move much more to the right for very small screens */
+    right: 1%; /* Stay within viewport bounds */
   }
   
   /* Target actual mobile devices with high pixel density */
   @media only screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
     width: 60vw; /* Even smaller size for high-density mobile screens like iPhone */
     max-width: 320px;
+    right: 1%; /* Ensure no horizontal scroll */
   }
   
   @include media-breakpoint-up(sm) {
