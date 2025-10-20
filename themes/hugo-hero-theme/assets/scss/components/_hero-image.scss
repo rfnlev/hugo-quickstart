@@ -295,41 +295,52 @@
 .hero-logo-overlay {
   position: absolute;
   top: 35%; /* Proportional positioning based on image content */
-  right: -5%; /* Move 10% more to the right (was 5%, now -5%) */
+  right: -5%; /* Move more to the right for mobile */
   transform: translateY(-50%);
   z-index: 10;
-  width: 80%; /* Bigger logo size for small screens */
-  max-width: none; /* Remove max-width to allow proportional scaling */
+  width: 90vw; /* Bigger viewport width for consistent mobile sizing */
+  max-width: 500px; /* Increased max-width for larger screens */
+  
+  /* For very small screens below 576px */
+  @media (max-width: 575px) {
+    max-width: 400px;
+    right: -12%; /* Move much more to the right for very small screens */
+  }
   
   @include media-breakpoint-up(sm) {
-    width: 70%; /* Bigger logo size for medium screens */
+    width: 80vw; /* Bigger viewport-based sizing for medium screens */
+    max-width: 550px;
     top: 38%; /* Slightly adjust for medium screens */
-    right: -2%; /* Move 10% more to the right (was 8%, now -2%) */
+    right: -12%; /* Move more to the right for small screens */
   }
   
   @include media-breakpoint-up(md) {
-    width: 65%; /* Bigger logo size for medium-large screens */
-    top: 42%; /* Adjust for medium-large screens */
-    right: 0%; /* Move 10% more to the right (was 10%, now 0%) */
+    width: 70vw; /* Bigger viewport-based sizing for medium-large screens */
+    max-width: 600px;
+    top: 44%; /* Adjust for medium-large screens */
+    right: -1%; /* Move more to the right for midsize screens */
   }
   
   @include media-breakpoint-up(lg) {
-    width: 60%; /* Bigger logo size for large screens */
+    width: 60vw; /* Bigger viewport-based sizing for large screens */
+    max-width: 650px;
     top: 45%; /* Adjust for large screens */
-    right: 2%; /* Move 10% more to the right (was 12%, now 2%) */
+    right: 9%;
   }
   
   @include media-breakpoint-up(xl) {
-    width: 55%; /* Continue scaling bigger for extra large screens */
+    width: 50vw; /* Bigger viewport-based sizing for extra large screens */
+    max-width: 700px;
     top: 47%; /* Adjust position for extra large screens */
-    right: 5%; /* Move 10% more to the right (was 15%, now 5%) */
+    right: 15%;
   }
   
   /* For very large screens (1400px+) */
   @media (min-width: 1400px) {
-    width: 50%; /* Bigger size for very large screens */
+    width: 45vw; /* Bigger viewport-based sizing for very large screens */
+    max-width: 1200px;
     top: 48%; /* Fine-tune position for very large screens */
-    right: 8%; /* Move 10% more to the right (was 18%, now 8%) */
+    right: 22%;
   }
 }
 
