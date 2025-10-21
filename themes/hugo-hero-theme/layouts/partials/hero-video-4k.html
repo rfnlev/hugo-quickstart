@@ -1,0 +1,31 @@
+<div id="hero" class="hero-image hero-image-setheight" style="margin-top: 0px; color: #ffffff!important;">
+  <div class="container ">
+      <div style="width: 100%;">
+          <video 
+          id="player-4k"
+          class="cld-video-player cld-fluid"
+          autoplay
+          playsinline
+          loop
+          muted
+          ></video>
+      </div>
+      <div class="hero-text" style="position: absolute; margin-left: 10px;margin-top: 100px;">
+              <h1>{{ .heading }}</h1>
+              <p>{{ .subheading }}</p>
+      </div>
+      <script type="text/plain" data-cookie-consent="functionality" src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.js"></script>
+      <script type="text/plain" data-cookie-consent="functionality" src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.light.min.js"></script>
+      
+      <script type="text/plain" data-cookie-consent="functionality">
+          var cld = cloudinary.Cloudinary.new({cloud_name: "dzw4emsdt"});
+          var player = cld.videoPlayer("player-4k", {
+              transformation: {
+                  quality: "auto",
+                  fetch_format: "auto"
+              }
+          });
+          player.source("{{ .video }}");
+      </script>
+    </div>
+</div>
